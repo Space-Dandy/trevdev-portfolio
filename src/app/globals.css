@@ -1,0 +1,267 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fade-logo {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.2;
+}
+
+.glitch-container {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000; 
+}
+
+.glitch {
+  position: relative;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: #1B9AAA;
+  z-index: -1;
+  animation: glitch 0.4s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: #FF5666;
+  z-index: -2;
+  animation: glitch 0.6s infinite linear alternate;
+}
+
+.particle-sphere {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: rotate 20s infinite linear;
+}
+
+.glow-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 30% 30%, #222222 0%, transparent 60%),
+              radial-gradient(circle at 70% 70%, #ffa600 0%, transparent 60%);
+  animation: glow-pulse 3s ease-in-out infinite;
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+.glow-bg-alt {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 30% 30%, #665687 0%, transparent 60%),
+              radial-gradient(circle at 70% 70%, #4908B1 0%, transparent 60%);
+  animation: glow-pulse 3s ease-in-out infinite;
+  filter: blur(20px);
+  opacity: 0.7;
+}
+
+@layer utilities {
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+
+.bubble-animate {
+  animation: bubble-wobble 4s infinite ease-in-out; ;
+}
+
+.bubble-animate-reverse {
+  animation: bubble-wobble 4s infinite ease-in-out reverse;
+}
+
+.logo-animate {
+  animation: logo-spin 6s infinite ease-in-out;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+@keyframes bubble-wobble {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-spin {
+  0% {
+    transform: rotate(-10deg);
+  } 
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes shift {
+  0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+    transform: skewX(0deg);
+  }
+
+  41% {
+    transform: skewX(10deg);
+  }
+
+  42% {
+    transform: skewX(-10deg);
+  }
+
+  59% {
+    transform: skewX(40deg) skewY(10deg);
+  }
+
+  60% {
+    transform: skewX(-40deg) skewY(-10deg);
+  }
+
+  63% {
+    transform: skewX(10deg) skewY(-5deg);
+  }
+
+  70% {
+    transform: skewX(-50deg) skewY(-20deg);
+  }
+
+  71% {
+    transform: skewX(10deg) skewY(-10deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.7;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(30px);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg);}
+  20% { transform: translate(-2px, 2px) rotate(-1deg);}
+  40% { transform: translate(-2px, -2px) rotate(1deg);}
+  60% { transform: translate(2px, 2px) rotate(0deg);}
+  80% { transform: translate(2px, -2px) rotate(1deg);}
+  100% { transform: translate(0, 0) rotate(0deg);}
+}
+.hover\:animate-shake:hover {
+  animation: shake 0.4s;
+}
+.animate-shake {
+  animation: shake 0.4s;
+}
