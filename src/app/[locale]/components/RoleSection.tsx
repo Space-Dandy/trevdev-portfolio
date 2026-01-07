@@ -20,7 +20,7 @@ export const RoleSection = ({
 
   return (
     <>
-      <div className='absolute bottom-8 left-4 right-4 md:bottom-40 md:right-8 md:left-auto max-w-full md:max-w-2xl'>
+      <div className='absolute bottom-8 left-4 right-4 md:bottom-40 md:right-8 md:left-auto max-w-full md:max-w-3xl'>
         <h2
           className={`text-white tracking-[2px] md:tracking-[5px] relative z-[1]`}
         >

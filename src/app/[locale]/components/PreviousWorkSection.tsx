@@ -1,5 +1,6 @@
 import { useIntlayer } from 'next-intlayer';
 import { Courier_Prime, Permanent_Marker } from 'next/font/google';
+import { useParams } from 'next/navigation';
 import { HightLightedText, PreviousWorkCard } from './PreviousWorkCard';
 
 const permanentMarker = Permanent_Marker({
@@ -26,6 +27,8 @@ const AnimatedBackground = () => {
 
 const AboutMeCard = () => {
   const { aboutMe } = useIntlayer('previousWork');
+  const params = useParams();
+  const locale = params.locale as 'en' | 'es';
 
   return (
     <div className='relative md:sticky md:top-24 p-6 md:p-8 rounded-lg shadow-lg w-full md:w-1/3 h-fit m-4 md:m-12 md:self-start'>
@@ -64,7 +67,7 @@ const AboutMeCard = () => {
       </p>
       <div className='mt-6 flex flex-col gap-4'>
         <a
-          href='/Andres_Trevino_CV.pdf'
+          href={`/cvs/AndresTrevino_Resume${locale === 'es' ? 'ES' : 'EN'}.pdf`}
           download
           className='px-4 py-2 bg-yellow-400 text-black font-bold rounded hover:bg-yellow-500 transition-colors text-center'
         >
