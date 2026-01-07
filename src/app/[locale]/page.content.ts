@@ -41,8 +41,8 @@ const pageContent = {
         es: 'Aquí puedes encontrarme en diferentes plataformas, además de checar mis trabajos previos en Github. Gracias por visitar mi portafolio',
       }),
       proTip: t({
-        en: 'Pro tip: Click the center circle to switch between Frontend and Backend mode!',
-        es: 'Pro tip: Haz click en el círculo central para cambiar entre modo Frontend y Backend!',
+        en: 'Pro tip: Click the center circle on the hero section to switch between Frontend and Backend mode!',
+        es: 'Pro tip: ¡Haz click en el círculo en la sección hero para cambiar entre modo Frontend y Backend!',
       }),
       github: t({
         en: 'Github',

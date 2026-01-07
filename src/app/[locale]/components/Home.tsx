@@ -119,97 +119,105 @@ const ContactSection = () => {
 
 const DesktopBubbles = ({ backEndMode }: { backEndMode: boolean }) => {
   return (
-    <div className='hidden md:block'>
-      <Bubble
-        hue='#00fff7'
-        backEndMode={backEndMode}
-        frontEndLogos={{
-          firstLogo: '/logos/react.png',
-          secondLogo: '/logos/nextjs.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/go.png',
-          secondLogo: '/logos/github.png',
-        }}
-        gradient={`radial-gradient(circle at 100% 100%, ${'#00fff7'} 0%, transparent 70%)`}
-        style={{ top: 150, left: 600 }}
-      />
+    <div className='hidden md:flex absolute inset-0 pointer-events-none'>
+      <div className='flex flex-col justify-center gap-12 ml-8 lg:ml-16 pointer-events-auto'>
+        <Bubble
+          hue='#00fff7'
+          backEndMode={backEndMode}
+          frontEndLogos={{
+            firstLogo: '/logos/react.png',
+            secondLogo: '/logos/nextjs.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/go.png',
+            secondLogo: '/logos/github.png',
+          }}
+          gradient={`radial-gradient(circle at 100% 100%, ${'#00fff7'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
 
-      <Bubble
-        hue='#d4a26dff'
-        backEndMode={backEndMode}
-        reverseAnimation={true}
-        frontEndLogos={{
-          firstLogo: '/logos/postman.png',
-          secondLogo: '/logos/jira.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/python.png',
-          secondLogo: '/logos/flask.png',
-        }}
-        gradient={`radial-gradient(circle at 50% 50%, ${'#EAD046'} 0%, transparent 70%)`}
-        style={{ top: 400, left: 400 }}
-      />
-      <Bubble
-        hue='#3178C6'
-        backEndMode={backEndMode}
-        reverseAnimation={true}
-        frontEndLogos={{
-          firstLogo: '/logos/ts.png',
-          secondLogo: '/logos/js.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/nodejs.png',
-          secondLogo: '/logos/express.png',
-        }}
-        gradient={`radial-gradient(circle at 100% 50%, ${'#3178C6'} 0%, transparent 70%)`}
-        style={{ bottom: 400, left: 350 }}
-      />
-      <Bubble
-        hue='#d4a26dff'
-        backEndMode={backEndMode}
-        reverseAnimation={true}
-        frontEndLogos={{
-          firstLogo: '/logos/flutter.png',
-          secondLogo: '/logos/dart.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/mysql.png',
-          secondLogo: '/logos/mongo.png',
-        }}
-        gradient={`radial-gradient(circle at 50% 50%, ${'#d4a26dff'} 0%, transparent 70%)`}
-        style={{ top: 150, right: 600 }}
-      />
-      <Bubble
-        hue='#d4a26dff'
-        backEndMode={backEndMode}
-        reverseAnimation={true}
-        frontEndLogos={{
-          firstLogo: '/logos/html.png',
-          secondLogo: '/logos/css.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/csharp.png',
-          secondLogo: '/logos/netcore.png',
-        }}
-        gradient={`radial-gradient(circle at 50% 50%, ${'#d4a26dff'} 0%, transparent 70%)`}
-        style={{ top: 400, right: 400 }}
-      />
-      <Bubble
-        hue='#b97021ff'
-        backEndMode={backEndMode}
-        reverseAnimation={true}
-        frontEndLogos={{
-          firstLogo: '/logos/tailwind.png',
-          secondLogo: '/logos/angular.png',
-        }}
-        backEndLogos={{
-          firstLogo: '/logos/java.png',
-          secondLogo: '/logos/spring.png',
-        }}
-        gradient={`radial-gradient(circle at 50% 50%, ${'#b97021ff'} 0%, transparent 70%)`}
-        style={{ bottom: 400, right: 350 }}
-      />
+        <Bubble
+          hue='#d4a26dff'
+          backEndMode={backEndMode}
+          reverseAnimation={true}
+          frontEndLogos={{
+            firstLogo: '/logos/postman.png',
+            secondLogo: '/logos/jira.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/python.png',
+            secondLogo: '/logos/flask.png',
+          }}
+          gradient={`radial-gradient(circle at 50% 50%, ${'#EAD046'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
+
+        <Bubble
+          hue='#3178C6'
+          backEndMode={backEndMode}
+          reverseAnimation={true}
+          frontEndLogos={{
+            firstLogo: '/logos/ts.png',
+            secondLogo: '/logos/js.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/nodejs.png',
+            secondLogo: '/logos/express.png',
+          }}
+          gradient={`radial-gradient(circle at 100% 50%, ${'#3178C6'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
+      </div>
+
+      <div className='flex flex-col justify-center gap-12 ml-auto mr-8 lg:mr-16 pointer-events-auto'>
+        <Bubble
+          hue='#11b4ffff'
+          backEndMode={backEndMode}
+          reverseAnimation={true}
+          frontEndLogos={{
+            firstLogo: '/logos/flutter.png',
+            secondLogo: '/logos/dart.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/mysql.png',
+            secondLogo: '/logos/mongo.png',
+          }}
+          gradient={`radial-gradient(circle at 50% 50%, ${'#d4a26dff'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
+
+        <Bubble
+          hue='#229da3ff'
+          backEndMode={backEndMode}
+          reverseAnimation={true}
+          frontEndLogos={{
+            firstLogo: '/logos/html.png',
+            secondLogo: '/logos/css.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/csharp.png',
+            secondLogo: '/logos/netcore.png',
+          }}
+          gradient={`radial-gradient(circle at 50% 50%, ${'#d4a26dff'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
+
+        <Bubble
+          hue='#00eeffff'
+          backEndMode={backEndMode}
+          reverseAnimation={true}
+          frontEndLogos={{
+            firstLogo: '/logos/tailwind.png',
+            secondLogo: '/logos/angular.png',
+          }}
+          backEndLogos={{
+            firstLogo: '/logos/java.png',
+            secondLogo: '/logos/spring.png',
+          }}
+          gradient={`radial-gradient(circle at 50% 50%, ${'#b97021ff'} 0%, transparent 70%)`}
+          style={{ position: 'relative' }}
+        />
+      </div>
     </div>
   );
 };

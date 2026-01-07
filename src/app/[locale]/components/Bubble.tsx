@@ -1,4 +1,3 @@
-
 import { memo, useState } from 'react';
 
 interface logos {
@@ -53,7 +52,6 @@ export const Bubble = memo(function Bubble({
           height: 140,
           background: gradient,
           boxShadow: `0 0 40px 10px ${hue}`,
-          position: 'absolute',
           ...style,
           zIndex: 20,
         }}
