@@ -21,10 +21,6 @@ const pageContent = {
           en: 'Programmer',
           es: 'Programador',
         }),
-        engineer: t({
-          en: 'Software Engineer',
-          es: 'Ingeniero de Software',
-        }),
       },
       welcomeMessage: t({
         en: 'Welcome to my portfolio!',

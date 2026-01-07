@@ -379,7 +379,6 @@ const Home = () => {
     content.hero.roles.developer.value,
     'Developer',
     content.hero.roles.programmer.value,
-    content.hero.roles.engineer.value,
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
