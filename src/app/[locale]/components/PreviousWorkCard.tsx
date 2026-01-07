@@ -1,5 +1,5 @@
 import { Courier_Prime, Permanent_Marker } from 'next/font/google';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PreviousWorkCardProps {
   title: string;
@@ -65,7 +65,7 @@ export const PreviousWorkCard = ({
 
   return (
     <div
-      className='bg-[#0C0908] p-6 rounded-lg shadow-lg mb-6 flex transition-all duration-300 ease-out'
+      className='bg-[#0C0908] p-6 rounded-lg shadow-lg mb-6 flex flex-col md:flex-row transition-all duration-300 ease-out'
       id={`card-${index}`}
       style={{
         transform: `scale(${scale})`,
@@ -74,29 +74,37 @@ export const PreviousWorkCard = ({
     >
       <div className='absolute inset-0 rounded-lg p-[3px] bg-gradient-to-r from-yellow-400 via-red-400 to-yellow-400 animate-gradient-x -z-10'></div>
       <div className='absolute inset-[3px] bg-[#0C0908] rounded-lg -z-10'></div>
-      <div className='w-full h-full mb-4 flex flex-col gap-6 rounded-lg overflow-hidden items-center p-2'>
-        <h4
-          className={`text-4xl font-bold ${permanentMarker.className} mb-2 text-yellow-400`}
-        >
-          {title}
-        </h4>
-        <div className={`text-white text-lg ${courierPrime.className} `}>
-          {children}
-        </div>
-        {techStack && (
-          <div>
-            <p className='font-bold text-yellow-400'>Tech Stack:</p>
-            <p className=''>{techStack.join(' - ')}</p>
-          </div>
-        )}
-      </div>
-      <div className='flex-grow '>
-        {imageUrl && (
+
+      {/* Image on top for mobile, on right for desktop */}
+      {imageUrl && (
+        <div className='w-full md:w-1/2 md:order-2 mb-4 md:mb-0 md:ml-4'>
           <img
             src={imageUrl}
             alt={title}
-            className='w-full h-full object-contain '
+            className='w-full h-full object-contain rounded-lg'
           />
+        </div>
+      )}
+
+      {/* Content */}
+      <div className='w-full md:w-1/2 md:order-1 flex flex-col gap-4 md:gap-6 items-center md:items-start p-2'>
+        <h4
+          className={`text-2xl md:text-4xl font-bold ${permanentMarker.className} text-yellow-400 text-center md:text-left`}
+        >
+          {title}
+        </h4>
+        <div
+          className={`text-white text-base md:text-lg ${courierPrime.className}`}
+        >
+          {children}
+        </div>
+        {techStack && (
+          <div className='w-full'>
+            <p className='font-bold text-yellow-400 text-sm md:text-base'>
+              Tech Stack:
+            </p>
+            <p className='text-sm md:text-base'>{techStack.join(' - ')}</p>
+          </div>
         )}
       </div>
     </div>

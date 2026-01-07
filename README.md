@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 TrevDev Portfolio
 
-## Getting Started
+Mi portafolio personal desarrollado con Next.js, mostrando mis proyectos y habilidades como desarrollador Full Stack.
 
-First, run the development server:
+## ✨ Características
+
+- 🎨 Diseño moderno con animaciones fluidas
+- 🌊 Efectos de blobs animados en el fondo
+- 📱 Diseño responsive
+- ⚡ Optimizado con Next.js 15
+- 🎭 Efectos de parallax scrolling
+- 💫 Transiciones y animaciones personalizadas
+- 🎯 Sección "Sobre mí" con sticky positioning
+
+## 🛠️ Tecnologías
+
+- **Framework:** Next.js 15
+- **Estilo:** Tailwind CSS
+- **Lenguaje:** TypeScript
+- **Fuentes:** Google Fonts (Permanent Marker, Courier Prime)
+- **Animaciones:** CSS Keyframes + Tailwind
+
+## 🚀 Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/YOUR_USERNAME/trevdev-portfolio.git
+
+# Instalar dependencias
+cd trevdev-portfolio
+npm install
+
+# Ejecutar en modo desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Scripts Disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Modo desarrollo
+npm run build    # Build para producción
+npm start        # Iniciar servidor de producción
+npm run lint     # Ejecutar ESLint
+```
 
-## Learn More
+## 👨‍💻 Sobre Mí
 
-To learn more about Next.js, take a look at the following resources:
+**Andrés Treviño**  
+Programador Full Stack de Culiacán, Sinaloa  
+Especializado en desarrollo Web, Backend y Móvil
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Licencia
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
-## Deploy on Vercel
+## 📧 Contacto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+¿Tienes un proyecto en mente? ¡Conectemos!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Hecho con ❤️ por Andrés Treviño, la IA solo me generó este README lmao.

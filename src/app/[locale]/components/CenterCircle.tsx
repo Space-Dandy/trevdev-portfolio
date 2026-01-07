@@ -1,3 +1,5 @@
+'use client';
+
 import { Rubik_Mono_One } from 'next/font/google';
 
 interface CenterCircleProps {
@@ -17,7 +19,7 @@ export const CenterCircle = ({
 }: CenterCircleProps) => {
   return (
     <div
-      className={`flex items-center justify-center w-175 h-175 rounded-full bg-[#1dc9f] shadow-2xl relative transition-all duration-300 ${
+      className={`flex items-center justify-center w-100 h-100 md:w-175 md:h-175 rounded-full bg-[#1dc9f] shadow-2xl relative transition-all duration-300 ${
         backEndMode
           ? 'bg-transparent animate-shake border border-black'
           : 'bg-[#1dc9f]'

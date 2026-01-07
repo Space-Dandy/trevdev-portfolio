@@ -1,3 +1,4 @@
+import { useIntlayer } from 'next-intlayer';
 import { Rubik_Mono_One } from 'next/font/google';
 
 interface RoleSectionProps {
@@ -15,15 +16,19 @@ export const RoleSection = ({
   roleIndex,
   backEndMode,
 }: RoleSectionProps) => {
+  const content = useIntlayer('page');
+
   return (
     <>
-      <div className='absolute bottom-40 right-8 max-w-full'>
-        <h2 className={`text-white tracking-[5px] relative z-[1]`}>
+      <div className='absolute bottom-8 left-4 right-4 md:bottom-40 md:right-8 md:left-auto max-w-full md:max-w-2xl'>
+        <h2
+          className={`text-white tracking-[2px] md:tracking-[5px] relative z-[1]`}
+        >
           <span key={roleIndex} className='relative inline-block'>
             <span className='relative inline-block'>
               <div className='glitch-container'>
                 <span
-                  className={`glitch text-4xl ${rubikMonoOne.className}`}
+                  className={`glitch text-xl sm:text-2xl md:text-3xl lg:text-4xl ${rubikMonoOne.className}`}
                   data-text={`${role} ${
                     !backEndMode ? 'front-end' : 'back-end'
                   }`}
@@ -34,10 +39,10 @@ export const RoleSection = ({
             </span>
           </span>
         </h2>
-        <p className='text-white text-2xl mt-4'>
+        <p className='text-white text-base sm:text-lg md:text-xl lg:text-2xl mt-2 md:mt-4'>
           {backEndMode
-            ? 'Esta página es una ilusión óptica creada para ser contratado.'
-            : 'Bienvenido a mi portafolio.'}
+            ? content.hero.altWelcomeMessage.value
+            : content.hero.welcomeMessage.value}
         </p>
       </div>
     </>

@@ -9,13 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "intlayer": "^7.5.6",
+    "lucide-react": "^0.562.0",
     "next": "16.0.5",
+    "next-intl": "^4.7.0",
+    "next-intlayer": "^7.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "tailwindcss-clip-path": "^1.0.1"
   },
   "devDependencies": {
-    "type": "module",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

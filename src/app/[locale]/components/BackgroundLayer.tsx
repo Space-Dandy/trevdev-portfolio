@@ -9,7 +9,7 @@ export const BackgroundLayer = ({
   return (
     <>
       <div
-        className={`absolute inset-0 transition-colors duration-300 ${
+        className={`fixed inset-0 w-full h-screen transition-colors duration-300 ${
           backEndMode ? 'bg-stone-700' : 'bg-yellow-500'
         }`}
         style={{
@@ -18,7 +18,7 @@ export const BackgroundLayer = ({
         }}
       />
       <div
-        className={`absolute inset-0 transition-opacity duration-300 ${
+        className={`fixed inset-0 w-full h-screen transition-opacity duration-300 ${
           backEndMode ? 'opacity-0' : ''
         } bg-[#222222]`}
         style={{
@@ -28,7 +28,7 @@ export const BackgroundLayer = ({
         }}
       />
       <div
-        className={`z-30 glow-bg`}
+        className={`fixed inset-0 w-full h-screen z-30 glow-bg`}
         style={{
           transform: `translateY(${scrollY}px)`,
           willChange: 'transform',
